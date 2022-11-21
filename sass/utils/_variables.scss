@@ -1,0 +1,60 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+:root {
+  --white: #ffffff;
+  --blueactive: #188ce8;
+  --blue: #2196f3;
+  --black: #000000;
+  --accentblack: #212121;
+  --greytext: #757575;
+  --greytext-footer: rgba(255, 255, 255, 0.6);
+  --placeholder: rgba(117, 117, 117, 0.5);
+
+  /* BACKGROUND */
+  --darkgrey: #2f303a;
+  --teamback: #f5f4fa;
+  --overlaybg: #c4c4c4;
+  --workbackgr: rgba(47, 48, 58, 0.8);
+
+  /* Icons */
+  --iconcolor: #afb1b8;
+  --iconfootr: rgba(255, 255, 255, 0.1);
+
+  /* Gradient */
+  --gradhero: rgba(47, 48, 58, 0.4);
+
+  /* shadow */
+  --shadow: rgba(0, 0, 0, 0.15);
+  --teamshadow1: rgba(0, 0, 0, 0.12);
+  --teamshadow2: rgba(0, 0, 0, 0.14);
+  --teamshadow3: rgba(0, 0, 0, 0.2);
+  --boxshadow1: rgba(0, 0, 0, 0.1);
+  --boxshadow2: rgba(0, 0, 0, 0.08);
+  --boxshadow3: rgba(0, 0, 0, 0.12);
+  --portfshadow2: rgba(0, 0, 0, 0.06);
+  --portfshadow3: rgba(0, 0, 0, 0.16);
+
+  /* border */
+  --footerborder: rgba(255, 255, 255, 0.3);
+
+  /* lines */
+  --portfborder: #eeeeee;
+  --hederline: #ececec;
+  --formborder: rgba(33, 33, 33, 0.2);
+
+  /* btn radius */
+  --btnradius: 4px;
+
+  /* flex */
+  --items: 3;
+  --itemsteam: 4;
+  --itemsadv: 4;
+  --indent: 30px;
+
+  /* Animation */
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ 

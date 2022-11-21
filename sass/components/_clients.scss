@@ -1,0 +1,41 @@
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.clients__item {
+  flex-basis: calc((100% - 30px) / 2);
+
+   @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--iconcolor);
+  background-color: var(--white);
+  color: var(--iconcolor);
+
+  border-radius: var(--btnradius);
+  min-height: 92px;
+
+  transition: border var(--anim), color var(--anim);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+  }
+}
+.clients__svg {
+  display: block;
+  fill: currentColor;
+}

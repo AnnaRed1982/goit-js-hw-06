@@ -1,0 +1,127 @@
+body {
+  background-color: var(--white);
+  color: var(--greytext);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  font-weight: 400;
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* outline: 1px solid blue;
+  outline-offset: -1px; */
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.logo {
+  color: var(--blue);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-size: 24px;
+  line-height: calc(28 / 24);
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-right: 87px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    font-size: 26px;
+    line-height: 1.19;
+
+    margin-right: 93px;
+  }
+  /* background-color: greenyellow; */
+}
+.title {
+  color: var(--accentblack);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.17;
+
+    margin-bottom: 50px;
+  }
+}
+/* social-icons */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--iconcolor);
+  background-color: var(--white);
+  border-radius: 50%;
+
+  transition: background-color var(--anim), color var(--anim);
+
+  &:hover,
+  &:focus {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+}
+.social__icon {
+  fill: currentColor;
+  display: block;
+}
+.button {
+  font-family: inherit;
+
+  display: inline-block;
+  min-width: 216px;
+  min-height: 50px;
+  padding: 10px 32px; /*32-2*2 ширина бордера*/
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  background-color: var(--blue);
+  color: var(--white);
+
+  cursor: pointer;
+
+  border-radius: var(--btnradius);
+  border: none;
+  outline: transparent;
+
+  box-shadow: 0px 4px 4px var(--shadow);
+
+  position: relative;
+
+  transition: background-color var(--anim), box-shadow var(--anim);
+
+  &:hover,
+  &:focus {
+    font-family: inherit;
+    background-color: var(--blueactive);
+    box-shadow: 0px 4px 4px var(--shadow);
+  }
+}

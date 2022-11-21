@@ -1,0 +1,37 @@
+.project {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.project__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.project__item {
+  position: relative;
+}
+.project__img {
+  flex-basis: calc((100% - var(--indent) * (var(--itemsteam) - 1)) / var(--itemsteam));
+}
+.project__name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  background-color: var(--workbackgr);
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+
+  min-height: 70px;
+}

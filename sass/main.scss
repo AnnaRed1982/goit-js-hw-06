@@ -1,0 +1,22 @@
+//utils styles
+@import './utils/visually-hidden';
+@import './utils/reset';
+@import './utils/variables';
+@import './utils/base';
+@import './utils/container';
+@import './utils/mixins';
+
+//components styles
+@import './components/header';
+@import './components/hero';
+@import './components/advantages';
+@import './components/projects';
+@import './components/team';
+@import './components/clients';
+@import './components/footer';
+@import './components/modal';
+@import './components/portfolio-filter';
+@import './components/portfolio-card';
+@import './components/mobile-menu';
+// @import './components/';
+

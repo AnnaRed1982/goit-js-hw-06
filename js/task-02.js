@@ -7,20 +7,32 @@
 
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
-const listREF = document.querySelector('#ingredients');
+const listIngredientsREF = document.querySelector('#ingredients');
 
-const ingridient = elem => {
-  const element = document.createElement('li');
-  element.textContent = elem;
-  element.classList.add('item');
-  console.log(element);
-  return element;
+const ingridientsList = ingredients => {
+  return ingredients.map(ingredient => {
+    const element = document.createElement('li');
+    element.textContent = ingredient;
+    element.classList.add('item');
+    console.log(element);
+    return element;
+  });
 };
 
-const ingredientsNew = ingredients.map(elem => ingridient(elem));
-
-listREF.append(...ingredientsNew);
+const ingredientsNew = ingridientsList(ingredients);
+listIngredientsREF.append(...ingredientsNew);
 
 // const list = document.querySelector('#ingredients');
 // const ingredientsNew = ingredients.map((ingred) =>`<li class="item">${ingred}</li>`).join("");
 // list.innerHTML = ingredientsNew;
+
+// const listREF = document.querySelector('#ingredients');
+// const ingridient = elem => {
+//   const element = document.createElement('li');
+//   element.textContent = elem;
+//   element.classList.add('item');
+//   console.log(element);
+//   return element;
+// };
+// const ingredientsNew = ingredients.map(elem => ingridient(elem));
+// listREF.append(...ingredientsNew);

@@ -19,19 +19,15 @@
 // }
 
 const inputValueREF = document.querySelector('#validation-input');
-
-console.log(inputValueREF.attributes);
-
-const dataLength = inputValueREF.getAttribute('data-length');
-console.log(dataLength);
+const dataLength = Number(inputValueREF.getAttribute('data-length'));
 
 inputValueREF.addEventListener('blur', event => {
   const dataInput = event.currentTarget.value;
-  console.log(dataInput.length);
 
-  if (dataInput.length === dataLength) {
-    inputValueREF.classList.add('valid');
-  }
+  inputValueREF.classList.remove('valid');
+  inputValueREF.classList.remove('invalid');
 
-  return inputValueREF;
+  dataInput.length === dataLength
+    ? inputValueREF.classList.add('valid')
+    : inputValueREF.classList.add('invalid');
 });

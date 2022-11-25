@@ -8,5 +8,5 @@ categoriesREF.forEach(elem => {
   const elementsREF = elem.lastElementChild.children;
   console.log('Elements:', elementsREF.length);
 });
-//  const title = elem.querySelector('h2');
+// const title = elem.querySelector('h2');
 // const elements = elem.querySelectorAll('li');

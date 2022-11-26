@@ -9,10 +9,6 @@
 const fontSizeControlREF = document.querySelector('#font-size-control');
 const textREF = document.querySelector('#text');
 
-console.log(fontSizeControlREF.attributes)
-
-// const changeSize = () => {}
-
-fontSizeControlREF.addEventListener('change', () => {
-  textREF.style.fontSize = fontSizeControlREF.getAttribute('range');
+fontSizeControlREF.addEventListener('input', event => {
+  textREF.style.fontSize = event.currentTarget.value + 'px';
 });

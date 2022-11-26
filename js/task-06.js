@@ -24,8 +24,7 @@ const dataLength = Number(inputValueREF.getAttribute('data-length'));
 inputValueREF.addEventListener('blur', event => {
   const dataInput = event.currentTarget.value;
 
-  inputValueREF.classList.remove('valid');
-  inputValueREF.classList.remove('invalid');
+  inputValueREF.classList.remove('valid', 'invalid');
 
   dataInput.length === dataLength
     ? inputValueREF.classList.add('valid')

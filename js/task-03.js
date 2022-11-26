@@ -23,7 +23,7 @@ const images = [
 const listREF = document.querySelector('.gallery');
 
 const imagesNew = images
-  .map(image => `<li class = gallery__image url = ${image.url} alt= ${image.alt}></li>`)
+  .map(image => `<li url =${image.url} alt=${image.alt}></li>`)
   .join('');
 
 listREF.insertAdjacentHTML('beforeend', imagesNew);

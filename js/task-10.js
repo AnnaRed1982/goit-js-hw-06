@@ -22,15 +22,15 @@
 // }
 
 // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
+const ref = {
+  boxes: document.querySelector('#boxes'),
+  input: document.querySelector('input'),
+  buttonCreate: document.querySelector('button[data-create]'),
+  buttonDestroy: document.querySelector('button[data-destroy]'),
+};
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
-function onChooseNumber(event) {
-  const amount = Number(event.currentTarget.value);
-  console.log(amount);
-  return amount;
 }
 
 function createBoxes(amount) {
@@ -47,15 +47,20 @@ function createBoxes(amount) {
   ref.boxes.append(...newDivArray);
 }
 
-const ref = {
-  boxes: document.querySelector('#boxes'),
-  input: document.querySelector('input'),
-  buttonCreate: document.querySelector('button[data-create]'),
-  buttonDestroy: document.querySelector('button[data-destroy]'),
-};
+function destroyBoxes() {
+  ref.boxes.innerHTML = '';
+}
 
-ref.input.addEventListener('input', onChooseNumber);
+ref.input.addEventListener('blur', event => {
+  let amount = Number(event.currentTarget.value);
 
-ref.buttonCreate.addEventListener('click', createBoxes());
+  ref.buttonCreate.addEventListener('click', () => {
+    createBoxes(amount);
+    amount = 0;
+  });
+  ref.input.value = '';
+});
 
-// createBoxes(5);
+ref.buttonDestroy.addEventListener('click', () => {
+  destroyBoxes();
+});

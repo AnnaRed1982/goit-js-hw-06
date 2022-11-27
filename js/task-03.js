@@ -1,4 +1,3 @@
-// Задание 3
 // Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
 // <ul class="gallery"></ul>
 // Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
@@ -23,10 +22,16 @@ const images = [
 const listREF = document.querySelector('.gallery');
 
 const imagesNew = images
-  .map(image => `<li><img url='${image.url}' alt='${image.alt}'></li>`)
+  .map(image => `<li><img src=${image.url} alt='${image.alt}'></li>`)
   .join('');
+
+listREF.insertAdjacentHTML('beforeend', imagesNew);
+
+const imgREF = document.querySelectorAll('img');
 
 listREF.style.listStyle = 'none';
 listREF.style.display = 'flex';
-
-listREF.insertAdjacentHTML('beforeend', imagesNew);
+listREF.style.flexDirection = 'column';
+for (let i = 0; i < imgREF.length; i += 1) {
+  imgREF[i].style.height = '200px';
+}
